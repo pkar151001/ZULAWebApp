@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ZULAWeb3</display-name>
+  <welcome-file-list>
+    <welcome-file>HomeMenu.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name> driverLogin</servlet-name>
+	<servlet-class>ZULALogins.driverLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> driverLogin</servlet-name>
+	<url-pattern>/driverLogin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+  	<servlet-name> customerLogin</servlet-name>
+	<servlet-class>ZULALogins.customerLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> customerLogin</servlet-name>
+	<url-pattern>/customerLogin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+  	<servlet-name> adminLogin</servlet-name>
+	<servlet-class>ZULALogins.adminLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> adminLogin</servlet-name>
+	<url-pattern>/adminLogin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+  	<servlet-name> adminViewCheck</servlet-name>
+	<servlet-class>ZULALogins.ZULAFetch.adminViewCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> adminViewCheck</servlet-name>
+	<url-pattern>/adminViewCheck</url-pattern>
+	</servlet-mapping>
+	<servlet>
+  	<servlet-name> adminResult</servlet-name>
+	<servlet-class>ZULALogins.ZULAFetch.adminResult</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> adminResult</servlet-name>
+	<url-pattern>/adminResult</url-pattern>
+	</servlet-mapping>
+	<servlet>
+  	<servlet-name> reset</servlet-name>
+	<servlet-class>reset</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> reset</servlet-name>
+	<url-pattern>/reset</url-pattern>
+	</servlet-mapping>
+</web-app>
