@@ -15,6 +15,9 @@ div
 <body>
 	<h1 style="text-align:center">Welcome to Customer`s Portal</h1>
 	<h3 style="text-align:center">Login to View and Book Rides </h3>
+	<br>
+	<h4 style="text-align:center">Wrong Username / Password.....<br>Please Re-Enter your Credentials or Register as a New User </h4>
+	<br>
 	<form action="http://localhost:8080/ZULAWeb3/customerLogin" method="post">
 	<div>
 	<label> Enter User Name </label>

@@ -4,15 +4,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ZULA Cabs - History</title>
 <style>
 th,td
 {
 	padding:15px;
 }
+a
+{
+  text-decoration:none;
+}
 </style>
 </head>
 <body>
+<%@page import = "ZULALogins.*" %>
+<% if(adminLogin.access==1)
+	{
+%>
 <h1 style="text-align:center"> The Overall History of Rides</h1>
 <%@ page import = "java.sql.*,ZULALogins.ZULAFetch.*,java.util.*" %>
 <%	
@@ -31,5 +39,12 @@ th,td
 	}
 %>
 </table>
+<%} 
+	if(adminLogin.access==0)
+	{
+%>
+<h1 style="text-align:center">Invalid Access !!!<br> Go to Home Page</h1>
+<h2 style="text-align:center"><a href="http://localhost:8080/ZULAWeb3/HomeMenu.html">To Home Page......</a></h2>
+<%} %>
 </body>
 </html>

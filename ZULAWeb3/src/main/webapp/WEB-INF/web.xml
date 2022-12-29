@@ -52,4 +52,36 @@
 	<servlet-name> reset</servlet-name>
 	<url-pattern>/reset</url-pattern>
 	</servlet-mapping>
+	<servlet>
+  	<servlet-name> customerRide</servlet-name>
+	<servlet-class>customerRide</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> customerRide</servlet-name>
+	<url-pattern>/customerRide</url-pattern>
+	</servlet-mapping>
+	<servlet>
+  	<servlet-name> customerView</servlet-name>
+	<servlet-class>ZULALogins.ZULAFetch.customerView</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> customerView</servlet-name>
+	<url-pattern>/customerView</url-pattern>
+	</servlet-mapping>
+	<servlet>
+  	<servlet-name> customerNewLogin</servlet-name>
+	<servlet-class>ZULALogins.customerNewLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> customerNewLogin</servlet-name>
+	<url-pattern>/customerNewLogin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+  	<servlet-name> newDriver</servlet-name>
+	<servlet-class>ZULALogins.newDriver</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> newDriver</servlet-name>
+	<url-pattern>/newDriver</url-pattern>
+	</servlet-mapping>
 </web-app>

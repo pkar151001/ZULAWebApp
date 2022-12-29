@@ -1,22 +1,21 @@
 package ZULALogins;
 
+import ZULALogins.ZULAVerify.*;
 import java.io.IOException;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServlet;
 
-public class adminLogin extends HttpServlet{
-	public static int access=0;
+public class customerLogin extends HttpServlet{
+	
 	public void service (ServletRequest req, ServletResponse res) throws IOException
-	{
+	{	
 		if(req.getParameter("userName")!="" && req.getParameter("userPass")!="")
 		{
 			String userName=req.getParameter("userName");
 			int userPass=Integer.parseInt(req.getParameter("userPass"));
-			if (userName.compareTo("Priyavarthan N")==0 && userPass==1510)
+			if (customerLoginCheck.validate(userName,userPass))
 			{
-				access=1;
-				RequestDispatcher rd= req.getRequestDispatcher("adminPage.jsp");
+				RequestDispatcher rd= req.getRequestDispatcher("customerPage.jsp");
 				try {
 					rd.forward(req, res);
 				} catch (ServletException e) {
@@ -27,7 +26,7 @@ public class adminLogin extends HttpServlet{
 			}
 			else
 			{
-				RequestDispatcher rd= req.getRequestDispatcher("adminReLogin.jsp");
+				RequestDispatcher rd= req.getRequestDispatcher("customerReLogin.jsp");
 				try 
 				{
 					rd.forward(req, res);
@@ -42,10 +41,10 @@ public class adminLogin extends HttpServlet{
 				}
 			}
 		}
-		
 		else
 		{
-			RequestDispatcher rd= req.getRequestDispatcher("adminReLogin.jsp");
+			//res.getWriter().print("Wrong Credentials.....Re-Login again");
+			RequestDispatcher rd= req.getRequestDispatcher("customerReLogin.jsp");
 			try 
 			{
 				rd.forward(req, res);
@@ -62,4 +61,5 @@ public class adminLogin extends HttpServlet{
 		
 	}
 }
+
 

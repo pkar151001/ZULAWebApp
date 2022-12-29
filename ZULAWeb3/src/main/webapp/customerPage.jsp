@@ -1,8 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ZULA Cabs - Administrator`s Zone</title>
+<title>ZULA Cabs -  Customer`s Portal</title>
 <style>
 div.container {
   text-align: center;
@@ -38,37 +40,31 @@ a
 </style>
 </head>
 <body>
-<%@page import = "ZULALogins.*" %>
-<% if(adminLogin.access==1)
+<%@page import = "ZULALogins.ZULAVerify.*" %>
+<% if(customerLoginCheck.userID!=0)
 	{
 %>
-<h1 style="text-align:center"> Administrator`s Play Ground </h1>
+	<h1 style="text-align:center"> Welcome Customer! </h1>
 <br>
 <br>
 <br>
+
 <div class="container">
 <ul class="List">
 <li>
-    <a href="http://localhost:8080/ZULAWeb3/adminViewCheck.jsp"><button type="submit">Check the Contribution of Each Cab</button></a>
+    <a href="http://localhost:8080/ZULAWeb3/customerRide.jsp"><button type="submit">Book a Ride</button></a>
 </li>
 <li>
-   <a href="http://localhost:8080/ZULAWeb3/adminResult"><button type="submit">Overall History of Rides</button></a>
-</li>
-<li>
-   <a href="http://localhost:8080/ZULAWeb3/newDriver.jsp"><button type="submit">Add new Cab details</button></a>
-</li>
-<li>
-	<a href="http://localhost:8080/ZULAWeb3/reset"><button type="submit">Reset to Original Data</button></a>
+   <a href="http://localhost:8080/ZULAWeb3/customerView"><button type="submit">View History of Rides</button></a>
 </li>
 </ul>
 </div>
 <%} 
-	if(adminLogin.access==0)
+	if(customerLoginCheck.userID==0)
 	{
 %>
 <h1 style="text-align:center">Invalid Access !!!<br> Go to Home Page</h1>
 <h2 style="text-align:center"><a href="http://localhost:8080/ZULAWeb3/HomeMenu.html">To Home Page......</a></h2>
 <%} %>
-
 </body>
 </html>
